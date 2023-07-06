@@ -1,0 +1,29 @@
+- config:
+    - testset: "API Tests"
+    - timeout: 100  # Increase timeout from the default 10 seconds
+
+- test:
+    - name: "Get Test"
+    - url: "/prod/CRUD/"
+    - method: "GET"
+
+- test: 
+    - name: "Post Test"
+    - url: "/prod/CRUD/"
+    - method: "POST"
+    - body: "www.github.com"
+    - headers: {'Content-Type': 'application/json'}
+
+- test:
+    - name: "Put Test"
+    - url: "/prod/CRUD/"
+    - method: "PUT"
+    - body: "www.facebook.com"
+    - headers: {'Content-Type': 'application/json'}
+
+- test: 
+    - name: "Delete Test"
+    - url: "/prod/CRUD/"
+    - method: "DELETE"
+    - body: "www.facebook.com"
+    - headers: {'Content-Type': 'application/json'}
